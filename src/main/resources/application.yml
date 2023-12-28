@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: coffeemachineapi
+  jpa:
+    show-sql: true
+    open-in-view: false
+    defer-datasource-initialization: true
+    hibernate:
+      ddl-auto: create
+    properties:
+        hibernate:
+        format_sql: true
+        default_batch_fetch_size: 20
+        jdbc.batch_size: 20
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/coffeemachineapi
+    username: user
+    password: password
+    driver-class-name: org.postgresql.Driver
+  sql:
+    init:
+      mode: always
